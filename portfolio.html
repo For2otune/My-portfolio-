@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fortune Akinola – Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- CURSOR DOT -->
+<div class="cursor-dot" id="cursor"></div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Fortune</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#services">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link">Home</a>
+  <a href="#services" class="mobile-link">About</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#resume" class="mobile-link">Resume</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-img">
+    <div class="hero-placeholder"><img src="./img/3c3dfe66-4c50-41db-a8a4-126d1aa1d806.jfif" alt="My picture " width="640px" height="680px"></div>
+  </div>
+  <div class="hero-text">
+    <p class="greeting">Hello I'm Fortune Akinola</p>
+    <h1>Software<br>Engineer</h1>
+    <p>I help businesses and startups build fast, reliable software — from responsive frontends to robust backends and data-driven systems. 
+      CS graduate of Redeemers' University, available for freelance and full-time opportunities.</p>
+    <a href="#services" class="btn">About Me</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="service-card">
+    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+      <rect x="6" y="8" width="36" height="28" rx="2"/>
+      <rect x="12" y="14" width="10" height="8" rx="1"/>
+      <line x1="26" y1="16" x2="36" y2="16"/>
+      <line x1="26" y1="20" x2="32" y2="20"/>
+      <line x1="12" y1="26" x2="36" y2="26"/>
+      <line x1="12" y1="30" x2="28" y2="30"/>
+      <path d="M18 36 L18 40 M30 36 L30 40 M12 40 L36 40"/>
+    </svg>
+    <p class="service-title">Frontend Dev</p>
+    <p class="service-desc">Building responsive, pixel-perfect interfaces with React, HTML & CSS.</p>
+  </div>
+  <div class="service-card active">
+    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M14 6 L34 6 L34 36 L14 36 Z"/>
+      <line x1="18" y1="14" x2="30" y2="14"/>
+      <line x1="18" y1="19" x2="30" y2="19"/>
+      <line x1="18" y1="24" x2="26" y2="24"/>
+      <path d="M28 30 L36 38 M32 34 L40 38 L36 42 L28 36"/>
+    </svg>
+    <p class="service-title">Backend Dev</p>
+    <p class="service-desc">Scalable APIs and server-side solutions with Node.js and databases.</p>
+  </div>
+  <div class="service-card">
+    <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M8 36 L22 14 L36 36"/>
+      <line x1="12" y1="28" x2="32" y2="28"/>
+      <circle cx="36" cy="14" r="6"/>
+    </svg>
+    <p class="service-title">ML & Data</p>
+    <p class="service-desc">Machine learning models and data analysis pipelines using Python.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stat-big">
+    <span class="num counter" data-target="3">0</span>
+    <span class="label">Years Experience</span>
+  </div>
+  <div class="stat-grid">
+    <div class="stat-item"><span class="num counter" data-target="15">0</span><p class="label">Clients</p></div>
+    <div class="stat-item"><span class="num counter" data-target="2">0</span><p class="label">Years Professional Experience</p></div>
+    <div class="stat-item"><span class="num counter" data-target="55">0</span><p class="label">Completed Projects</p></div>
+    <div class="stat-item"><span class="num counter" data-target="30">0</span><p class="label">Achievements</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header">
+    <h2>Featured Projects</h2>
+    <a href="projects.html" class="view-all">View All</a>
+  </div>
+  <p class="section-sub">A selection of projects I've built and shipped</p>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-thumb" data-tech="Html • CSS •Java Script• ML• FastAPI">
+         <img src="./img/Stress level predictor scrren shot.png" alt="Student Stress Predictor screenshot">
+      </div>
+      <div class="project-info">
+        <h3>Stress level prediction System</h3>
+        <a href="https://stress-level-prediction-system.netlify.app/"
+         class="know-more" target="_blankS">Know More →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-thumb" data-tech="Python • FastAPI • ML">
+        <div class="project-thumb-placeholder">ML Dashboard</div>
+      </div>
+      <div class="project-info">
+        <h3>ML Dashboard</h3>
+        <a href="#" class="know-more">Know More →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-thumb" data-tech="React • CSS • REST API">
+        <div class="project-thumb-placeholder">Portfolio App</div>
+      </div>
+      <div class="project-info">
+        <h3>Portfolio App</h3>
+        <a href="#" class="know-more">Know More →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-thumb" data-tech="Node.js • Express • SQL">
+        <div class="project-thumb-placeholder">E-Commerce API</div>
+      </div>
+      <div class="project-info">
+        <h3>E-Commerce API</h3>
+        <a href="#" class="know-more">Know More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="reveal">
+  <div class="resume-inner">
+    <div class="section-header">
+      <h2>Resume</h2>
+      <a href="Fortune_Akinola_CV.pdf" download class="btn-code">
+        <span class="code-bracket">&lt;</span>
+        Download CV
+        <span class="code-bracket">/&gt;</span>
+        <span class="code-cursor">_</span>
+      </a>
+    </div>
+    <p class="section-sub">Computer Science graduate and Full Stack Developer with expertise in modern web technologies, cloud infrastructure, and scalable system design.</p>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4 class="skill-group-label"><span class="skill-dot"></span> Frontend</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Vue.js</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label"><span class="skill-dot"></span> Backend</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Go</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label"><span class="skill-dot"></span> Cloud & DevOps</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Terraform</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-group-label"><span class="skill-dot"></span> AI & Data</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">OpenAI API</span>
+          <span class="skill-tag">LangChain</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <h2>Let's work together on your next project</h2>
+  <div class="cta-right">
+    <p>Got a project in mind? I'm available for freelance work and open to new opportunities.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="contact-inner">
+    <div class="section-header">
+      <h2>Contact</h2>
+    </div>
+    <p class="section-sub">Have a project in mind or want to talk? I'm always open to the right opportunity.</p>
+
+    <div class="contact-grid">
+
+      <!-- Info side -->
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:for20tune@gmail.com" class="contact-value">for20tune@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+2348100482505" class="contact-value">+234 810 048 2505</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Nigeria 🇳🇬</span>
+        </div>
+        <div class="contact-socials">
+          <a href="#" class="contact-social-link">GitHub</a>
+          <a href="#" class="contact-social-link">LinkedIn</a>
+          <a href="#" class="contact-social-link">Twitter</a>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-field">
+          <input type="text" id="fname" name="name" placeholder=" " required />
+          <label for="fname">Full Name</label>
+        </div>
+        <div class="form-field">
+          <input type="email" id="femail" name="email" placeholder=" " required />
+          <label for="femail">Email Address</label>
+        </div>
+        <div class="form-field">
+          <input type="text" id="fsubject" name="subject" placeholder=" " required />
+          <label for="fsubject">Subject</label>
+        </div>
+        <div class="form-field">
+          <textarea id="fmessage" name="message" rows="5" placeholder=" " required></textarea>
+          <label for="fmessage">Message</label>
+        </div>
+        <button type="submit" class="btn-code submit-btn">
+          <span class="code-bracket">&lt;</span>
+          Initialize Connection
+          <span class="code-bracket">/&gt;</span>
+          <span class="code-cursor">_</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-nav">
+    <a href="#home">Home</a>
+    <a href="#services">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-logo">F</div>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p class="footer-credit">♥ Created by <span>Fortune</span></p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
