@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects – Fortune Akinola</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="portfolio.css">
+<style>
+  /* Page-specific tweaks for the projects gallery */
+  .projects-page-header {
+    padding: 160px 8% 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #matrixCanvas {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    opacity: .100;
+    pointer-events: none;
+  }
+  .projects-page-header p.tag {
+    color: rgb(230, 10, 10); font-size: 20px; font-weight: 700;
+    letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px;
+    position: relative; z-index: 1;
+    font-family: 'Fira Code', monospace;
+  }
+  .projects-page-header p.tag::before { content: '// '; color: var(--code-green); }
+  .projects-page-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: .04em;
+    margin-bottom: 18px;
+    position: relative; z-index: 1;
+  }
+  .projects-page-header h1 .type-cursor {
+    display: inline-block;
+    width: .5ch;
+    background: var(--red);
+    animation: blink 1s step-end infinite;
+    margin-left: 4px;
+  }
+  .projects-page-header p.sub {
+    color: var(--muted); font-size: .92rem; max-width: 520px;
+    margin: 0 auto;
+    position: relative; z-index: 1;
+    font-family: 'Fira Code', monospace;
+  }
+ 
+  .projects-page-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 28px; padding: 40px 8% 100px;
+  }
+  @media (max-width: 900px) {
+    .projects-page-grid { grid-template-columns: 1fr; }
+  }
+  .back-link {
+    display: inline-block; margin: 0 8%;
+    color: var(--muted); font-size: .75rem;
+    letter-spacing: .16em; text-transform: uppercase;
+    text-decoration: none; font-weight: 700;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--red); }
+</style>
+</head>
+<body>
+
+<!-- CURSOR DOT -->
+<div class="cursor-dot" id="cursor"></div>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Fortune</a>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home" class="mobile-link">Home</a>
+  <a href="index.html#services" class="mobile-link">About</a>
+  <a href="projects.html" class="mobile-link">Projects</a>
+  <a href="index.html#resume" class="mobile-link">Resume</a>
+  <a href="index.html#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="projects-page-header reveal">
+  <canvas id="matrixCanvas"></canvas>
+  <p class="tag">Portfolio</p>
+  <h1><span id="typedHeading"></span><span class="type-cursor">&nbsp;</span></h1>
+  <p class="sub">A complete look at what I've built from frontend interfaces to machine learning systems and backend APIs.</p>
+</section>
+
+<a href="portfolio.html" class="back-link">← Back to Home</a>
+
+<!-- FULL PROJECTS GRID -->
+<section class="projects-page-grid reveal">
+
+  <!-- Duplicate this block for each project -->
+  <div class="project-card">
+    <div class="project-thumb" data-tech="Html • CSS •Java Script• ML• FastAPI">
+      <img src="./img/Stress level predictor scrren shot.png" alt="Student Stress Predictor screenshot">
+    </div>
+    <div class="project-info">
+      <h3>Stress level prediction system </h3>
+      <a href="https://stress-level-prediction-system.netlify.app/" class="know-more" target="_blank">Know More →</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-thumb" data-tech="Tech • Stack • Here">
+      <div class="project-thumb-placeholder">Project Title</div>
+    </div>
+    <div class="project-info">
+      <h3>Project Title</h3>
+      <a href="#" class="know-more" target="_blank">Know More →</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-thumb" data-tech="Tech • Stack • Here">
+      <div class="project-thumb-placeholder">Project Title</div>
+    </div>
+    <div class="project-info">
+      <h3>Project Title</h3>
+      <a href="#" class="know-more" target="_blank">Know More →</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-thumb" data-tech="Tech • Stack • Here">
+      <div class="project-thumb-placeholder">Project Title</div>
+    </div>
+    <div class="project-info">
+      <h3>Project Title</h3>
+      <a href="#" class="know-more" target="_blank">Know More →</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-nav">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-logo">F</div>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p class="footer-credit">♥ Created by <span>Fortune</span></p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="portfolio.js"></script>
+<script>
+  // Terminal-style typing effect for the heading
+  const typedEl = document.getElementById('typedHeading');
+  const fullText = 'ALL PROJECTS';
+  let i = 0;
+  (function typeChar() {
+    if (i <= fullText.length) {
+      typedEl.textContent = fullText.slice(0, i);
+      i++;
+      setTimeout(typeChar, 90);
+    }
+  })();
+
+  // Matrix falling code rain background
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+  const header = canvas.parentElement;
+
+  function resizeCanvas() {
+    canvas.width = header.offsetWidth;
+    canvas.height = header.offsetHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const chars = '01{}<>/;=[]()ABCDEFabcdef'.split('');
+  const fontSize = 15;
+  let columns = Math.floor(canvas.width / fontSize);
+  let drops = Array(columns).fill(1);
+
+  function drawMatrix() {
+    ctx.fillStyle = 'rgba(17,17,17,0.08)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#cc2222';
+    ctx.font = fontSize + 'px monospace';
+    drops.forEach((y, x) => {
+      const text = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(text, x * fontSize, y * fontSize);
+      if (y * fontSize > canvas.height && Math.random() > 0.975) drops[x] = 0;
+      drops[x]++;
+    });
+  }
+  setInterval(drawMatrix, 55);
+</script>
+</body>
+</html>
