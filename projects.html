@@ -17,11 +17,11 @@
   #matrixCanvas {
     position: absolute; inset: 0;
     width: 100%; height: 100%;
-    opacity: .100;
+    opacity: .16;
     pointer-events: none;
   }
   .projects-page-header p.tag {
-    color: rgb(230, 10, 10); font-size: 20px; font-weight: 700;
+    color: var(--red); font-size: .8rem; font-weight: 700;
     letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px;
     position: relative; z-index: 1;
     font-family: 'Fira Code', monospace;
@@ -47,7 +47,8 @@
     position: relative; z-index: 1;
     font-family: 'Fira Code', monospace;
   }
- 
+  .projects-page-header p.sub::before { content: '/* '; color: var(--code-green); }
+  .projects-page-header p.sub::after { content: ' */'; color: var(--code-green); }
   .projects-page-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 28px; padding: 40px 8% 100px;
