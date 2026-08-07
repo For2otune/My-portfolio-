@@ -8,6 +8,15 @@ document.querySelectorAll('a, button, .service-card, .project-card').forEach(el 
   el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%, -50%) scale(2.5)');
   el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%, -50%) scale(1)');
 });
+/*
+const screen = document.getElementById('loadingScreen');
+const fill = document.getElementById('loaderFill');
+
+window.addEventListener('load', () => {
+  fill.style.width = '100%';
+  setTimeout(() => screen.classList.add('hidden'), 400);
+});
+*/
 
 // Scroll progress bar
 const scrollBar = document.getElementById('scrollBar');
