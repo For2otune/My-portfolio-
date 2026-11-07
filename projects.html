@@ -50,8 +50,9 @@
   .projects-page-header p.sub::before { content: '/* '; color: var(--code-green); }
   .projects-page-header p.sub::after { content: ' */'; color: var(--code-green); }
   .projects-page-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 28px; padding: 40px 8% 100px;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px; padding: 40px 8% 100px;
+    align-items: start;
   }
   @media (max-width: 900px) {
     .projects-page-grid { grid-template-columns: 1fr; }
@@ -111,44 +112,43 @@
 <!-- FULL PROJECTS GRID -->
 <section class="projects-page-grid reveal">
 
-  <!-- Duplicate this block for each project -->
-  <div class="project-card">
+  <div class="project-card" data-project="n8n">
+    <div class="project-thumb" data-tech="n8n • OpenAI API • Python • Markdown">
+      <img src="./img/Techny Fire workflow.jpg" alt="n8n Blog Automation Workflow">
+    </div>
+    <div class="project-info">
+      <h3>n8n Blog Automation</h3>
+      <button class="know-more" onclick="openProjectPopup('n8n')">Know More →</button>
+    </div>
+  </div>
+
+  <div class="project-card" data-project="stress">
     <div class="project-thumb" data-tech="Html • CSS •Java Script• ML• FastAPI">
       <img src="./img/Stress level predictor scrren shot.png" alt="Student Stress Predictor screenshot">
     </div>
     <div class="project-info">
       <h3>Stress level prediction system </h3>
-      <a href="https://stress-level-prediction-system.netlify.app/" class="know-more" target="_blank">Know More →</a>
+      <button class="know-more" onclick="openProjectPopup('stress')">Know More →</button>
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="project-thumb" data-tech="Node.js • HTML • CSS • JavaScript">
-     <img src="./img/Technest screenshot.jpg" alt="TechNest screenshot">
+  <div class="project-card" data-project="technest">
+    <div class="project-thumb" data-tech="HTML • CSS • JavaScript • Bootstrap 5">
+    <img src="./img/Technest screenshot.jpg" alt="TechNest screenshot">
     </div>
     <div class="project-info">
       <h3>TechNest</h3>
-      <a href="https://technest-website-replica.onrender.com" class="know-more" target="_blank">Know More →</a>
+      <button class="know-more" onclick="openProjectPopup('technest')">Know More →</button>
     </div>
   </div>
 
-  <div class="project-card">
-    <div class="project-thumb" data-tech="Tech • Stack • Here">
-      <div class="project-thumb-placeholder">Project Title</div>
+  <div class="project-card" data-project="telegram">
+    <div class="project-thumb" data-tech="JavaScript • n8n • Claude AI">
+      <img src="./img/Email agent.jpg" alt="Email_agent screenshot">
     </div>
     <div class="project-info">
-      <h3>Project Title</h3>
-      <a href="#" class="know-more" target="_blank">Know More →</a>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <div class="project-thumb" data-tech="Tech • Stack • Here">
-      <div class="project-thumb-placeholder">Project Title</div>
-    </div>
-    <div class="project-info">
-      <h3>Project Title</h3>
-      <a href="#" class="know-more" target="_blank">Know More →</a>
+      <h3>Telegram Email Agent</h3>
+      <button class="know-more" onclick="openProjectPopup('telegram')">Know More →</button>
     </div>
   </div>
 
@@ -166,10 +166,9 @@
   <div class="footer-bottom">
     <div class="footer-logo">F</div>
     <div class="footer-social">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">YouTube</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://github.com/For2otune" target="_blank">GitHub</a>
+      <a href="https://x.com/iAmFxrtune" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/fortune-akinola-219550309" target="_blank">LinkedIn</a>
     </div>
     <p class="footer-credit">♥ Created by <span>Fortune</span></p>
   </div>

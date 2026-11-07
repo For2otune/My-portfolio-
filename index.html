@@ -56,10 +56,9 @@
   </div>
   <div class="hero-text">
     <p class="greeting">I'm Fortune Akinola</p>
-    <h1>Software<br>Engineer</h1>
-    <p>I help businesses and startups build fast, reliable software from responsive frontends to robust backends and data-driven systems. 
-      CS graduate of Redeemers' University, available for freelance and full-time opportunities.</p>
-    <a href="#services" class="btn">About Me</a>
+    <h1>AI AUTOMATION<br>DEVELOPER</h1>
+    <p>I build AI-powered automation: workflows that collect, process and publish content with minimal human input. Computer Science graduate of Redeemer's University with hands-on experience in n8n, LLM APIs, Python and FastAPI. Open to freelance work and AI automation roles.</p>
+    <a href="projects.html" class="btn">See My Work</a>
   </div>
 </section>
 
@@ -76,7 +75,7 @@
       <path d="M18 36 L18 40 M30 36 L30 40 M12 40 L36 40"/>
     </svg>
     <p class="service-title">Frontend Dev</p>
-    <p class="service-desc">Building responsive, pixel-perfect interfaces with React, HTML & CSS.</p>
+    <p class="service-desc">Building responsive web interfaces with HTML, CSS, JavaScript & Bootstrap 5.</p>
   </div>
   <div class="service-card active">
     <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -86,8 +85,8 @@
       <line x1="18" y1="24" x2="26" y2="24"/>
       <path d="M28 30 L36 38 M32 34 L40 38 L36 42 L28 36"/>
     </svg>
-    <p class="service-title">Backend Dev</p>
-    <p class="service-desc">Scalable APIs and server-side solutions with Node.js and databases.</p>
+    <p class="service-title">AI Automation</p>
+    <p class="service-desc">Building intelligent workflows and robust APIs with Python, FastAPI & n8n.</p>
   </div>
   <div class="service-card">
     <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -95,8 +94,8 @@
       <line x1="12" y1="28" x2="32" y2="28"/>
       <circle cx="36" cy="14" r="6"/>
     </svg>
-    <p class="service-title">ML & Data</p>
-    <p class="service-desc">Machine learning models and data analysis pipelines using Python.</p>
+    <p class="service-title">AI Engineering</p>
+    <p class="service-desc">Developing machine learning models and predictive systems as an aspiring AI Engineer.</p>
   </div>
 </section>
 
@@ -107,10 +106,10 @@
     <span class="label">Years Experience</span>
   </div>
   <div class="stat-grid">
-    <div class="stat-item"><span class="num counter" data-target="15">0</span><p class="label">Clients</p></div>
+    <div class="stat-item"><span class="num counter" data-target="3">0</span><p class="label">Clients</p></div>
     <div class="stat-item"><span class="num counter" data-target="2">0</span><p class="label">Years Professional Experience</p></div>
-    <div class="stat-item"><span class="num counter" data-target="55">0</span><p class="label">Completed Projects</p></div>
-    <div class="stat-item"><span class="num counter" data-target="30">0</span><p class="label">Achievements</p></div>
+    <div class="stat-item"><span class="num counter" data-target="6">0</span><p class="label">Completed Projects</p></div>
+    <div class="stat-item"><span class="num counter" data-target="5">0</span><p class="label">Achievements</p></div>
   </div>
 </section>
 
@@ -123,43 +122,47 @@
   <p class="section-sub">A selection of projects I've built and shipped</p>
 
   <div class="projects-grid">
-    <div class="project-card">
+
+    <div class="project-card" data-project="n8n">
+      <div class="project-thumb" data-tech="n8n • OpenAI API • Python">
+        <img src="./img/Technyfire workflow.jpg" alt="n8n Blog Automation Workflow">
+      </div>
+      <div class="project-info">
+        <h3>news pipeline running on technyfire.net</h3>
+        <button class="know-more" onclick="openProjectPopup('n8n')">Know More →</button>
+      </div>
+    </div>
+
+    <div class="project-card" data-project="stress">
       <div class="project-thumb" data-tech="Html • CSS •Java Script• ML• FastAPI">
          <img src="./img/Stress level predictor scrren shot.png" alt="Student Stress Predictor screenshot">
       </div>
       <div class="project-info">
         <h3>Stress level prediction System</h3>
-        <a href="https://stress-level-prediction-system.netlify.app/"
-         class="know-more" target="_blank">Know More →</a>
+        <button class="know-more" onclick="openProjectPopup('stress')">Know More →</button>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-thumb" data-tech="Node.js • HTML • CSS • JavaScript">
+
+    <div class="project-card" data-project="technest">
+      <div class="project-thumb" data-tech="HTML • CSS • JavaScript • Bootstrap 5">
         <img src="./img/Technest screenshot.jpg" alt="TechNest screenshot">
       </div>
       <div class="project-info">
         <h3>TechNest</h3>
-        <a href="https://technest-website-replica.onrender.com" class="know-more" target="_blank">Know More →</a>
+        <button class="know-more" onclick="openProjectPopup('technest')">Know More →</button>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-thumb" data-tech="React • CSS • REST API">
-        <div class="project-thumb-placeholder">Portfolio App</div>
+
+    <div class="project-card" data-project="telegram">
+      <div class="project-thumb" data-tech="JavaScript • n8n • Claude AI">
+        <img src="./img/Email agent.jpg" alt="Email_agent screenshot">
       </div>
       <div class="project-info">
-        <h3>Portfolio App</h3>
-        <a href="#" class="know-more">Know More →</a>
+        <h3>Telegram Email Agent</h3>
+        <button class="know-more" onclick="openProjectPopup('telegram')">Know More →</button>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-thumb" data-tech="Node.js • Express • SQL">
-        <div class="project-thumb-placeholder">E-Commerce API</div>
-      </div>
-      <div class="project-info">
-        <h3>E-Commerce API</h3>
-        <a href="#" class="know-more">Know More →</a>
-      </div>
-    </div>
+
   </div>
 </section>
 
@@ -175,47 +178,42 @@
         <span class="code-cursor">_</span>
       </a>
     </div>
-    <p class="section-sub">Computer Science graduate and Full Stack Developer with expertise in modern web technologies, cloud infrastructure, and scalable system design.</p>
+    <p class="section-sub">Computer Science graduate and AI Automation Developer specializing in intelligent workflows, LLM orchestration, and data-driven systems.</p>
 
     <div class="skills-grid">
       <div class="skill-group">
         <h4 class="skill-group-label"><span class="skill-dot"></span> Frontend</h4>
         <div class="skill-tags">
-          <span class="skill-tag">React.js</span>
-          <span class="skill-tag">Next.js</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Bootstrap 5</span>
         </div>
       </div>
       <div class="skill-group">
         <h4 class="skill-group-label"><span class="skill-dot"></span> Backend</h4>
         <div class="skill-tags">
-          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">FastAPI</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">Go</span>
-          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MySQL</span>
           <span class="skill-tag">MongoDB</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4 class="skill-group-label"><span class="skill-dot"></span> Cloud & DevOps</h4>
+        <h4 class="skill-group-label"><span class="skill-dot"></span> Data Analytics</h4>
         <div class="skill-tags">
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">CI/CD</span>
-          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">R</span>
         </div>
       </div>
       <div class="skill-group">
         <h4 class="skill-group-label"><span class="skill-dot"></span> AI & Data</h4>
         <div class="skill-tags">
-          <span class="skill-tag">TensorFlow</span>
           <span class="skill-tag">PyTorch</span>
           <span class="skill-tag">Pandas</span>
           <span class="skill-tag">OpenAI API</span>
-          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">Scikit-Learn</span>
         </div>
       </div>
     </div>
@@ -256,14 +254,14 @@
           <span class="contact-value">Nigeria 🇳🇬</span>
         </div>
         <div class="contact-socials">
-          <a href="#" class="contact-social-link">GitHub</a>
-          <a href="#" class="contact-social-link">LinkedIn</a>
-          <a href="#" class="contact-social-link">Twitter</a>
+          <a href="https://github.com/For2otune" target="_blank" class="contact-social-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/fortune-akinola-219550309" target="_blank" class="contact-social-link">LinkedIn</a>
+          <a href="https://x.com/iAmFxrtune" target="_blank" class="contact-social-link">Twitter</a>
         </div>
       </div>
 
       <!-- Form side -->
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mdeebgdl" method="POST">
         <div class="form-field">
           <input type="text" id="fname" name="name" placeholder=" " required />
           <label for="fname">Full Name</label>
@@ -293,21 +291,13 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-nav">
-    <a href="#home">Home</a>
-    <a href="#services">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </div>
+ 
   <div class="footer-bottom">
-    <div class="footer-logo">F</div>
+    <div class="footer-logo">FORTUNE</div>
     <div class="footer-social">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">YouTube</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://github.com/For2otune" target="_blank">GitHub</a>
+      <a href="https://x.com/iAmFxrtune" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/fortune-akinola-219550309" target="_blank">LinkedIn</a>
     </div>
     <p class="footer-credit">♥ Created by <span>Fortune</span></p>
   </div>

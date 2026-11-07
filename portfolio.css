@@ -1,4 +1,10 @@
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 4px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--red); }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, border-color 0.3s ease; }
 
 :root {
   --bg: #111111;
@@ -137,11 +143,12 @@ nav {
   padding-top: 80px;
 }
 .hero-placeholder {
-  width: min(520px, 60%);
+  width: 390px;
+  height: 530px;
   margin: 0 auto;
   max-width: 100%;
   background: linear-gradient(160deg, #2a2a2a 0%, #1a1a1a 100%);
-  border-radius: 4px;
+  border-radius: 50% / 36%;
   display: flex; align-items: center; justify-content: center;
   color: var(--muted); font-size: .85rem; letter-spacing: .1em;
   animation: fadeUp .9s ease both;
@@ -250,9 +257,9 @@ nav {
 }
 .view-all:hover { background: var(--red-hover); }
 
-.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.project-card { cursor: pointer; 
-}
+.projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.project-card { cursor: pointer; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.project-card:hover { transform: translateY(-6px); }
 .project-thumb {
   width: 100%; aspect-ratio: 16/10; overflow: hidden;
   background: var(--bg3);
@@ -284,9 +291,11 @@ nav {
   display: inline-flex; align-items: center; gap: 6px;
   color: var(--red); font-size: .75rem;
   letter-spacing: .14em; text-transform: uppercase;
-  font-weight: 700; text-decoration: none; transition: gap .2s;
+  font-weight: 700; background: transparent; border: none; outline: none;
+  cursor: pointer; text-decoration: none; font-family: inherit; padding: 0; margin: 0; box-shadow: none;
+  transition: gap .2s, opacity .2s;
 }
-.know-more:hover { gap: 10px; }
+.know-more:hover { gap: 10px; opacity: 0.85; }
 
 /* ===== RESUME ===== */
 #resume {
@@ -434,10 +443,10 @@ footer { border-top: 1px solid var(--border); padding: 50px 8%; }
   font-weight: 600; transition: color .2s;
 }
 .footer-nav a:hover { color: var(--white); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; border-top:solid ; border-width: 1px; border-color: #fff;}
 .footer-logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem; letter-spacing: .08em; color: var(--red);
+  font-size: 2rem; letter-spacing: .08em; color: var(--red); padding-top: 20px;
 }
 .footer-social { display: flex; gap: 22px; }
 .footer-social a {
@@ -474,7 +483,7 @@ footer { border-top: 1px solid var(--border); padding: 50px 8%; }
 @media (max-width: 900px) {
   #home { grid-template-columns: 1fr; padding: 120px 6% 60px; text-align: center; }
   .hero-img { order: -1; }
-  .hero-placeholder { width: min(220px, 60%); margin: 0 auto; }
+  .hero-placeholder { width: min(280px, 80%); height: 380px; margin: 0 auto; border-radius: 50% / 38%; }
   .hero-text { padding-left: 0; display: flex; flex-direction: column; align-items: center; }
   #services { grid-template-columns: 1fr; }
   .service-card { border-right: none; border-bottom: 1px solid var(--border); }
@@ -490,3 +499,78 @@ footer { border-top: 1px solid var(--border); padding: 50px 8%; }
   body { cursor: auto; }
   .cursor-dot { display: none; }
 }
+
+/* POPUP MODAL (.pm) */
+.pm-backdrop {
+  position: fixed; inset: 0; z-index: 99999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.pm-backdrop.is-active {
+  opacity: 1; pointer-events: all;
+}
+.pm-modal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  width: min(90%, 650px);
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+.pm-backdrop.is-active .pm-modal {
+  transform: translateY(0);
+}
+.pm-close {
+  position: absolute; top: 20px; right: 20px;
+  background: var(--bg3); border: 1px solid var(--border);
+  color: var(--white); width: 36px; height: 36px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; cursor: pointer; transition: background 0.2s, border-color 0.2s;
+  z-index: 10;
+}
+.pm-close:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.pm-img-wrap {
+  width: 100%; aspect-ratio: 16/10; overflow: hidden;
+  background: var(--bg3); border-radius: 8px; margin-bottom: 20px;
+}
+.pm-img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.pm-modal[data-project="n8n"] .pm-img {
+  object-fit: contain; background: #0d0d0d;
+}
+.pm-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem; letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+.pm-summary {
+  font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px;
+}
+.pm-section-title {
+  font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--code-green); font-weight: 700; margin: 16px 0 8px;
+  font-family: 'Fira Code', monospace;
+}
+.pm-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+.pm-list { padding-left: 18px; font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+.pm-list li { margin-bottom: 4px; }
+.pm-status { font-size: 0.85rem; color: var(--code-green); font-style: italic; margin-bottom: 16px; }
+.pm-links { display: flex; gap: 14px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); }
+.pm-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--red); color: #fff; padding: 10px 22px;
+  font-size: .75rem; letter-spacing: .16em; text-transform: uppercase;
+  text-decoration: none; font-weight: 700; transition: background .2s, transform .15s;
+}
+.pm-btn:hover { background: var(--red-hover); transform: translateY(-2px); }
+.pm-btn.github { background: var(--bg3); border: 1px solid var(--border); color: var(--white); }
+.pm-btn.github:hover { border-color: var(--red); }
